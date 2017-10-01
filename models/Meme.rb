@@ -51,9 +51,9 @@ class Meme
 	def save
 		conn = Meme.open_connection
 		if (!self.id)
-			sql = "INSERT INTO meme (body, title) VALUES ( '#{self.body}', '#{self.title}')"
+			sql = "INSERT INTO meme (description, title, url, genre) VALUES ( '#{self.description}', '#{self.title}', '#{self.url}', '#{self.genre}')"
 		else
-			sql = "UPDATE meme SET title = '#{self.title}', body = '#{self.body}' WHERE id = #{self.id}"
+			sql = "UPDATE meme SET title = '#{self.title}', description = '#{self.description}', url = '#{self.url}', genre = '#{self.genre}' WHERE id = #{self.id}"
 		end
 	
 

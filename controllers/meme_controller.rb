@@ -28,7 +28,9 @@ class MemeController < Sinatra::Base
 	post "/meme" do
 		new_meme = Meme.new
 		new_meme.title = params[:title]
-		new_meme.body = params[:body]
+		new_meme.description = params[:description]
+		new_meme.url = params[:url]
+		new_meme.genre = params[:genre]
 		new_meme.save
 		redirect '/meme'
 	end
@@ -59,7 +61,7 @@ class MemeController < Sinatra::Base
 	put "/meme/:id" do
 		meme = Meme.find(params[:id])
 		meme.title = params[:title]
-		meme.body = params[:body]
+		meme.description = params[:description]
 		meme.save
 		redirect '/memes/#{meme.id}'
 	end

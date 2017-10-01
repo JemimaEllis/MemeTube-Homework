@@ -2,12 +2,12 @@
 
 <% @memes.each do |meme| %>
 
-	<h2>Bruno Mars - The Lazy Song<%= meme.title %></h2>
-	<p><%= meme.description %></p>
+	<h2><%= meme.title %></h2>
+	<p></p>
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/<%= meme.url %>" frameborder="0" allowfullscreen></iframe>
 	
 	<a href="/meme/<%= meme.id %>">View</a>
-	<h2>BODY<%= meme.description %></h2>
+	<h2><%= meme.description %></h2>
 	<a href="/meme/<%= meme.id %>/edit">Edit</a>
 
 
