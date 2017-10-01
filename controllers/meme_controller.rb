@@ -7,13 +7,13 @@ class MemeController < Sinatra::Base
 
 	set :views, Proc.new { File.join(root, 'views')}
 
-end
+
 
 	#Index
 
 	get '/meme' do
 		@page_header = "All my memes"
-		@posts = Post.all
+		@meme = Post.all
 		erb :"posts/index"
 	end
 

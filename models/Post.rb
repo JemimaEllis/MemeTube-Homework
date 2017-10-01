@@ -1,4 +1,4 @@
-class meme
+class Meme
 
 	attr_accessor :id, :title, :body
 	def self.open_connection
