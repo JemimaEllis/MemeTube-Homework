@@ -13,49 +13,57 @@ class MemeController < Sinatra::Base
 
 	get '/meme' do
 		@page_header = "All my memes"
-		@meme = Post.all
-		erb :"posts/index"
+		@memes = Meme.all
+		erb :"meme/index"
 	end
 
 	#New
 
 	get '/meme/new' do
-		erb :"posts/new"
+		erb :"meme/new"
 	end
 
 	#Create
 
 	post "/meme" do
-		new_meme = Post.new
+		new_meme = Meme.new
 		new_meme.title = params[:title]
 		new_meme.body = params[:body]
 		new_meme.save
 		redirect '/meme'
 	end
 
+
+	#show
+
+	get "/meme/:id"
+		
+
+	# /photos/:id                   GET                                 Show
+
 	#edit
 
 	get '/meme/:id/edit' do
-		@meme = Post.find(params[:id])
+		@meme = Meme.find(params[:id])
 
-		redirect '/posts/#{meme.id}'
+		redirect '/memes/#{meme.id}'
 
 	end
 
 	#update
 
 	put "/meme/:id" do
-		meme = Post.find(params[:id])
-		post.title = params[:title]
-		post.body = params[:body]
-		post.save
-		redirect '/posts/#{mrmr.id'
+		meme = Meme.find(params[:id])
+		meme.title = params[:title]
+		meme.body = params[:body]
+		meme.save
+		redirect '/memes/#{mrmr.id'
 	end
 
 	#delete
 
 	delete 'meme/:id' do
-		Post.destroy(params[:id])
+		Meme.destroy(params[:id])
 		redirect '/meme'
 	end
 
