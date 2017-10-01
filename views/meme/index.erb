@@ -1,12 +1,15 @@
 <h1><%= @page_header %></h1>
 
-<% @meme.each do |meme| %>
+<% @memes.each do |meme| %>
 
-	<h2>TITLE<%= meme.title %></h2>
-	<p><%= meme.body %></p>
+	<h2>Bruno Mars - The Lazy Song<%= meme.title %></h2>
+	<p><%= meme.description %></p>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/<%= meme.url %>" frameborder="0" allowfullscreen></iframe>
+	
 	<a href="/meme/<%= meme.id %>">View</a>
-	<h2>BODY<%= meme.body %></h2>
+	<h2>BODY<%= meme.description %></h2>
 	<a href="/meme/<%= meme.id %>/edit">Edit</a>
+
 
 	<form action="/meme/<%= meme.id %>" method="POST">
 	<input type="hidden" name="_method" value="DELETE">

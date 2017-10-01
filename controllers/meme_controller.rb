@@ -36,18 +36,22 @@ class MemeController < Sinatra::Base
 
 	#show
 
-	get "/meme/:id"
-		
+	get "/meme/:id" do
+		@meme = Meme.find(params[:id])
+		erb :"meme/show"
+    end
 
-	# /photos/:id                   GET                                 Show
+
+
 
 	#edit
 
 	get '/meme/:id/edit' do
-		@meme = Meme.find(params[:id])
+		
+		id = params[:id].to_i
+		@meme = Meme.find(id)
 
-		redirect '/memes/#{meme.id}'
-
+		erb :"/meme/edit"
 	end
 
 	#update
@@ -57,7 +61,7 @@ class MemeController < Sinatra::Base
 		meme.title = params[:title]
 		meme.body = params[:body]
 		meme.save
-		redirect '/memes/#{mrmr.id'
+		redirect '/memes/#{meme.id}'
 	end
 
 	#delete

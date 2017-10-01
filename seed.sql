@@ -9,6 +9,6 @@ CREATE TABLE meme (
 );
 
 
-INSERT INTO meme (title, description, url, genre) VALUES ('title 1', 'description 1', 'url 1', 'genre 1');
+INSERT INTO meme (title, description, url, genre) VALUES ('title 1', 'description 1', 'fLexgOxsZu0', 'genre 1');
 INSERT INTO meme (title, description, url, genre) VALUES ('title 2', 'description 2', 'url 2', 'genre 2');
 
