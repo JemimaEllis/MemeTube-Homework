@@ -10,6 +10,12 @@
 <label for="description">Description: </label>
 <textarea name="description"><%= @meme.description %></textarea>
 
+<label for="url">URL: </label>
+<textarea name="description"><%= @meme.url %></textarea>
+
+<label for="genre">Genre: </label>
+<textarea name="genre"><%= @meme.genre %></textarea>
+
 <input type="hidden" name="_method" value="PUT">
 
 <input type="submit" value="update">

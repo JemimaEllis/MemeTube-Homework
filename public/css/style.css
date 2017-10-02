@@ -1,4 +1,9 @@
 body {
-	background-color: lightblue;
+	background-image: url("../../images/space.jpg");
+	color: white;
 	text-align: center;
+}
+
+a {
+	color: white;
 }

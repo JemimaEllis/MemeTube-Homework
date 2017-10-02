@@ -68,7 +68,7 @@ class Meme
 #delete
 
 	def self.destroy id
-		conn = self.open_connection
+		conn = Meme.open_connection
 		sql =  "DELETE FROM meme WHERE id = #{id}"
 		conn.exec(sql)
 

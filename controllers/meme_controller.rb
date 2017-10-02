@@ -62,6 +62,8 @@ class MemeController < Sinatra::Base
 		meme = Meme.find(params[:id])
 		meme.title = params[:title]
 		meme.description = params[:description]
+		new_meme.url = params[:url]
+		new_meme.genre = params[:genre]
 		meme.save
 		redirect '/memes/#{meme.id}'
 	end

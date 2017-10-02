@@ -9,6 +9,6 @@ CREATE TABLE meme (
 );
 
 
-INSERT INTO meme (title, description, url, genre) VALUES ('Bruno Mars - The Lazy Song', 'description 1', 'fLexgOxsZu0', 'music video');
-INSERT INTO meme (title, description, url, genre) VALUES ('Rihanna - Diamonds', 'description', 'HnImthnsU7w', 'music video');
+INSERT INTO meme (title, description, url, genre) VALUES ('The Lazy Song', 'By Bruno Mars, released in 2010', 'fLexgOxsZu0', 'music video');
+INSERT INTO meme (title, description, url, genre) VALUES ('Rihanna - Diamonds', 'description 2', 'HnImthnsU7w', 'music video');
 
